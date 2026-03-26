@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -47,6 +49,24 @@ public class Principal {
         ///episodio.setSerie(Vikings);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+
+        Filme filmeVictor = new Filme();
+
+        filmeVictor.setNome("Homem aranha");
+        filmeVictor.setDuracaoEmMinutos(200);
+        filmeVictor.setAnoDeLancamento(2020);
+        filmeVictor.avalia(9);
+
+        ArrayList<Filme> listaDeFilmes =  new ArrayList<>();
+        listaDeFilmes.add(filmeVictor);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista "+listaDeFilmes.size());
+        System.out.println("Primeiro Flme: "+listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString do filme" + listaDeFilmes.get(0).toString());
+
 
 
     }
