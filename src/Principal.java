@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Venom");
+        Filme meuFilme = new Filme("Venom");
+        ///meuFilme.setNome("Venom");
         meuFilme.setAnoDeLancamento(2020);
         meuFilme.setDuracaoEmMinutos(190);
 
@@ -30,8 +30,8 @@ public class Principal {
         serie.setMinutosPorEpisodios(50);
         System.out.println("Duração para maratonar a serie: "+serie.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Batman");
+        Filme outroFilme = new Filme("Batman");
+        ///outroFilme.setNome("Batman");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(185);
 
@@ -51,9 +51,9 @@ public class Principal {
         filtro.filtra(episodio);
 
 
-        Filme filmeVictor = new Filme();
+        Filme filmeVictor = new Filme("Homem aranha");
 
-        filmeVictor.setNome("Homem aranha");
+        ///filmeVictor.setNome("Homem aranha");
         filmeVictor.setDuracaoEmMinutos(200);
         filmeVictor.setAnoDeLancamento(2020);
         filmeVictor.avalia(9);
