@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculo.Recomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -8,9 +10,9 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("Venom");
+        Filme meuFilme = new Filme("Venom", 2020);
         ///meuFilme.setNome("Venom");
-        meuFilme.setAnoDeLancamento(2020);
+        ///meuFilme.setAnoDeLancamento(2020);
         meuFilme.setDuracaoEmMinutos(190);
 
         meuFilme.exibeFichaTecnica();
@@ -20,19 +22,19 @@ public class Principal {
         System.out.println("Total de avaliações: "+meuFilme.getTotalDeAvalicoes());
         System.out.println(meuFilme.obterMedia());
 
-        Serie serie = new Serie();
+        Serie serie = new Serie("Vikings", 2012);
 
-        serie.setNome("Vikings");
-        serie.setAnoDeLancamento(2012);
+        ///serie.setNome("Vikings");
+        ///serie.setAnoDeLancamento(2012);
         serie.exibeFichaTecnica();
         serie.setTemporadas(3);
         serie.setEpisodiosPorTemporada(10);
         serie.setMinutosPorEpisodios(50);
         System.out.println("Duração para maratonar a serie: "+serie.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme("Batman");
+        Filme outroFilme = new Filme("Batman", 2023);
         ///outroFilme.setNome("Batman");
-        outroFilme.setAnoDeLancamento(2023);
+        ///outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(185);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -51,11 +53,11 @@ public class Principal {
         filtro.filtra(episodio);
 
 
-        Filme filmeVictor = new Filme("Homem aranha");
+        Filme filmeVictor = new Filme("Homem aranha", 2020);
 
         ///filmeVictor.setNome("Homem aranha");
         filmeVictor.setDuracaoEmMinutos(200);
-        filmeVictor.setAnoDeLancamento(2020);
+        ///filmeVictor.setAnoDeLancamento(2020);
         filmeVictor.avalia(9);
 
         ArrayList<Filme> listaDeFilmes =  new ArrayList<>();
